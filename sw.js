@@ -1,12 +1,15 @@
 const cacheName = "To-Do-App-v1";      // cache for local assets
 const dataCacheName = "toDoApp-data";  // cache for dynamic data
 
-const filesToCache = [				   // local assets
+const filesToCache = [				   // local assets 
 	'/',
-	'./index.html',
-	'./bootstrap.min.css',
-	'./main.js',
-	'./bootstrap.min.js'
+	'/index.html',
+	'/bootstrap.min.css',
+	'/main.js',
+	'/bootstrap.min.js',
+	'/qr-scanner.js',
+	'/qr-scanner.min.js',
+	'/qr-scanner-worker.min.js'
 ];
 
 self.addEventListener('install', async e => {
