@@ -3,10 +3,10 @@ const dataCacheName = "toDoApp-data";  // cache for dynamic data
 
 const filesToCache = [				   // local assets
 	'/',
-	'/index.html',
-	'/bootstrap.min.css',
-	'/main.js',
-	'/bootstrap.min.js'
+	'./index.html',
+	'./bootstrap.min.css',
+	'./main.js',
+	'./bootstrap.min.js'
 ];
 
 self.addEventListener('install', async e => {
