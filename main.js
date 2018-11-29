@@ -294,8 +294,10 @@ const scan = () => {
 	if (camQrResult.innerHTML != 'none') {
 		scanQrResult.innerHTML = 'SUCCESS';
 		scanner.stop();
+	} else {
+		scanQrResult.innerHTML = 'PLEASE SCAN QR PROPERLY'
 	}
-	setTimeout(() => scanner.start(), 2000);
+	setTimeout(() => scanner.start(), 1500);
 };
 
 
