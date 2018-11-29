@@ -30,7 +30,7 @@ self.addEventListener('activate', async e => {
 
 self.addEventListener('fetch', async e => {
 	const req = e.request;
-	const dataUrl = 'https://tomchoe.github.io/qrpwa';
+	const dataUrl = 'https://tomchoe.github.io/testqr';
 
 	if(req.url.indexOf(dataUrl) > -1) {
 		e.respondWith(networkFirst(req));
