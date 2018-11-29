@@ -271,22 +271,22 @@ async function mockDataPush(req) {
 //   reader.readAsDataURL(node.files[0]);
 // }
 
-// import QrScanner from "qr-scanner.min.js";
-//     const video = document.getElementById('qr-video');
-//     const camQrResult = document.getElementById('cam-qr-result');
+import QrScanner from "./qr-scanner.js";
 
-//     function setResult(label, result) {
-//         label.textContent = result;
-//         label.style.color = 'teal';
-//         clearTimeout(label.highlightTimeout);
-//         label.highlightTimeout = setTimeout(() => label.style.color = 'inherit', 100);
-//     }
+const video = document.getElementById('qr-video');
+const camQrResult = document.getElementById('cam-qr-result');
 
+function setResult(label, result) {
+    label.textContent = result;
+    label.style.color = 'teal';
+    clearTimeout(label.highlightTimeout);
+    label.highlightTimeout = setTimeout(() => label.style.color = 'inherit', 100);
+}
 
-//     // ####### Web Cam Scanning #######
+// ####### Web Cam Scanning #######
 
-//     const scanner = new QrScanner(video, result => setResult(camQrResult, result));
-//     scanner.start();
+const scanner = new QrScanner(video, result => setResult(camQrResult, result));
+scanner.start();
 
 
 
