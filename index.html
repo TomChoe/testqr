@@ -17,7 +17,7 @@
 		  <a class="navbar-brand" href="/">PWA demo</a>
 		    <ul class="navbar-nav ml-auto">
 		      <li class="nav-item">
-		       	<button class="btn btn-danger scan">SCAN</button>
+		       	<button class="btn btn-primary">test</button>
 		      </li>
 		    </ul>	 
 		</nav>
@@ -27,12 +27,15 @@
 	
 			<h1>Scan from WebCam:</h1>
 			<div>
-			    <video muted autoplay playsinline id="qr-video"></video>
+			    <video muted autoplay playsinline id="qr-video" width=50% height=50%></video>
 			</div>
 
 			<b>Detected QR code: </b>
 			<span id="cam-qr-result">None</span>
 			<hr>
+			<span id="scan-qr-result"></span>
+			<hr>
+			<button class="btn btn-danger scan">SCAN</button>
 <!-- 			<input type=text class=qrcode-text>
 			<label class=qrcode-text-btn>
 			  <input type=file

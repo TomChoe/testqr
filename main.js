@@ -19,9 +19,9 @@ const convertKey = (base64String) => {
 
 // document.getElementById("scanner").style.display = "none";
 
-// document.querySelector('.scan').addEventListener('click', () => {
-// 	scanner();
-// })
+document.querySelector('.scan').addEventListener('click', () => {
+	scan();
+})
 
 if ('mediaDevices' in navigator) {
 	console.log('camera is available on device');
@@ -275,6 +275,7 @@ import QrScanner from "./qr-scanner.js";
 
 const video = document.getElementById('qr-video');
 const camQrResult = document.getElementById('cam-qr-result');
+const scanQrResult = document.getElementById('scan-qr-result');
 
 function setResult(label, result) {
     label.textContent = result;
@@ -287,6 +288,15 @@ function setResult(label, result) {
 
 const scanner = new QrScanner(video, result => setResult(camQrResult, result));
 scanner.start();
+
+const scan = () => {
+	console.log("scanning current code ", camQrResult.innerHTML);
+	if (camQrResult.innerHTML != 'none') {
+		scanQrResult.innerHTML = 'SUCCESS';
+		scanner.stop();
+	}
+	setTimeout(() => scanner.start(), 2000);
+};
 
 
 
