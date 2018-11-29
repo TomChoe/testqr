@@ -284,6 +284,8 @@ function setResult(label, result) {
     label.highlightTimeout = setTimeout(() => label.style.color = 'inherit', 100);
 }
 
+camQrResult.addEventListener('change', () => console.log('this is current cam result ', camQrResult.innerHTML))
+
 // ####### Web Cam Scanning #######
 
 const scanner = new QrScanner(video, result => setResult(camQrResult, result));
@@ -294,9 +296,7 @@ const scan = () => {
 	if (camQrResult.innerHTML != 'none') {
 		scanQrResult.innerHTML = 'SUCCESS';
 		scanner.stop();
-	} else {
-		scanQrResult.innerHTML = 'PLEASE SCAN QR PROPERLY'
-	}
+	} 
 	setTimeout(() => scanner.start(), 1500);
 };
 

@@ -1,6 +1,6 @@
 {
-	"name": "To Do App",
-	"short_name": "To-Do-App",
+	"name": "PWA App",
+	"short_name": "PWA-App",
 	"icons": [{
 		"src": "",
 		"sizes": "192x192",
