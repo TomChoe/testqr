@@ -2,9 +2,9 @@
 	"name": "PWA App",
 	"short_name": "PWA-App",
 	"icons": [{
-		"src": "",
+		"src": "./simple.png",
 		"sizes": "192x192",
-		"type": ""
+		"type": "image/png"
 	}],
 	"start_url": "/",
 	"display": "standalone",
